@@ -17,6 +17,8 @@ export const profile = {
   intro:
     'I am Animesh Pratap Singh, a final-year B.Tech Computer Science Engineering student specializing in Artificial Intelligence and Machine Learning at Roorkee Institute of Technology. I have hands-on experience in full-stack development, data analytics, and AI-powered applications. I enjoy building scalable, user-centric web applications, integrating AI APIs, and solving real-world problems through technology. I also have a strong leadership background through the National Cadet Corps (NCC).',
   location: 'Roorkee, Uttarakhand',
+  /** Shown as a "Now" badge in the hero and first in Experience. */
+  current: { role: 'Full-Stack Developer Intern', company: 'Redinent Innovations Pvt Ltd', short: 'Redinent Innovations' },
   email: 'anipratap01@gmail.com',
   phone: '+91-9554117566',
   links: {
@@ -28,7 +30,7 @@ export const profile = {
   resumeFileName: 'Animesh_Pratap_Singh_Resume.pdf',
   portrait: {
     src: '/assets/portrait-720.webp',
-    srcSet: '/assets/portrait-420.webp 420w, /assets/portrait-720.webp 720w, /assets/portrait-1100.webp 1100w',
+    srcSet: '/assets/portrait-420.webp 420w, /assets/portrait-720.webp 720w, /assets/portrait-1100.webp 1086w',
     alt: 'Portrait of Animesh Pratap Singh',
   },
   interests: ['Artificial Intelligence & Machine Learning', 'Full-Stack Development', 'Data Analytics', 'AI-Powered Applications', 'Competitive Programming'],
@@ -52,6 +54,13 @@ export const education = [
 ];
 
 export const experience = [
+  {
+    company: 'Redinent Innovations Pvt Ltd',
+    role: 'Full-Stack Developer Intern',
+    place: 'Internship',
+    period: 'Currently working',
+    points: ['Currently working as a Full-Stack Developer Intern.'],
+  },
   {
     company: 'Arcoiris Logics',
     role: 'Technical Intern',
@@ -190,8 +199,8 @@ export const achievements: Achievement[] = [
     id: 'ncc-c',
     title: 'NCC C Certificate',
     org: 'National Cadet Corps',
-    detail: 'Successfully completed the NCC C Certificate with an A Grade.',
-    laurel: 'A Grade',
+    detail: 'Successfully completed the NCC C Certificate.',
+    laurel: 'Cadet Leadership',
   },
   {
     id: 'dsa',
@@ -339,7 +348,7 @@ export const skillEvidence: Record<string, string[]> = {
   'Gemini API': ['AI Rasoi'],
   Tableau: ['Deloitte Data Analytics job simulation'],
   'Microsoft Excel': ['Deloitte Data Analytics job simulation'],
-  'Leadership & team coordination': ['NCC C Certificate (A Grade)'],
+  'Leadership & team coordination': ['NCC C Certificate'],
   'Mentoring & communication': ['National Cadet Corps'],
   'Competitive programming': ['266+ DSA problems', 'HackerRank 30 Days of Code'],
   'Data Analytics': ['Deloitte Australia job simulation'],
@@ -410,8 +419,8 @@ export const seasons: Season[] = [
       {
         code: 'S02 E02',
         title: 'The Cadet',
-        description: 'Completed the NCC C Certificate with an A Grade — leadership, team coordination and mentoring through the National Cadet Corps.',
-        tags: ['NCC', 'Leadership', 'A Grade'],
+        description: 'Successfully completed the NCC C Certificate — leadership, team coordination and mentoring through the National Cadet Corps.',
+        tags: ['NCC', 'Leadership', 'C Certificate'],
         runtime: 'National Cadet Corps',
         palette: crimson,
       },
@@ -499,12 +508,20 @@ export const seasons: Season[] = [
   },
   {
     number: 5,
-    title: "What's Next",
-    period: 'Now streaming',
-    synopsis: 'The interests point to the next arc of the story.',
+    title: 'Now Streaming',
+    period: 'Present',
+    synopsis: 'Currently working as a Full-Stack Developer Intern at Redinent Innovations Pvt Ltd — and looking ahead.',
     episodes: [
       {
         code: 'S05 E01',
+        title: 'The Full-Stack Intern',
+        description: 'Currently working as a Full-Stack Developer Intern at Redinent Innovations Pvt Ltd.',
+        tags: ['Full-Stack', 'Internship', 'Now'],
+        runtime: 'Currently working',
+        palette: crimson,
+      },
+      {
+        code: 'S05 E02',
         title: 'The Next Chapter',
         description: 'Going deeper into AI & Machine Learning, full-stack development, data analytics and AI-powered applications — and more competitive programming.',
         tags: ['AI / ML', 'Full-Stack', 'Data Analytics'],
@@ -519,14 +536,14 @@ export type TopPick = { label: string; title: string; detail: string; palette: P
 
 export const topPicks: TopPick[] = [
   { label: 'Biggest stage', title: 'HackIndia 2025', detail: 'Top 5 among 97 teams', palette: ocean },
+  { label: 'Now streaming', title: 'Redinent Innovations', detail: 'Full-Stack Developer Intern', palette: crimson },
   { label: 'The AI Original', title: 'GramConnect AI', detail: 'Rural governance • live on Vercel', palette: crimson },
-  { label: 'Leadership', title: 'NCC C Certificate', detail: 'A Grade • National Cadet Corps', palette: amber },
+  { label: 'Leadership', title: 'NCC C Certificate', detail: 'National Cadet Corps', palette: amber },
   { label: 'Problems solved', title: '266+', detail: 'Data Structures & Algorithms', palette: jade },
   { label: 'The Social Original', title: 'Postify', detail: 'MERN social app • live on Vercel', palette: violet },
   { label: 'Gemini-powered', title: 'AI Rasoi', detail: 'Voice & image recipe generation', palette: crimson },
   { label: 'The internship arc', title: 'Arcoiris Logics', detail: 'Technical Intern • Jul – Sep 2025', palette: ocean },
   { label: 'Data credential', title: 'Deloitte Analytics', detail: 'Forage job simulation • July 2026', palette: jade },
-  { label: 'Challenge complete', title: '30 Days of Code', detail: 'HackerRank', palette: amber },
   { label: 'Current focus', title: 'AI / ML', detail: 'with Full-Stack & Data Analytics', palette: violet },
 ];
 
@@ -549,7 +566,7 @@ export const introSlides: IntroSlide[] = [
   {
     kicker: 'Experience',
     title: 'The Internship Arc',
-    lines: ['Technical Intern · Arcoiris Logics', 'July 2025 – September 2025', 'Full-Stack · API Integration · Databases'],
+    lines: ['Now: Full-Stack Developer Intern · Redinent Innovations', 'Before: Technical Intern · Arcoiris Logics (Jul – Sep 2025)', 'Full-Stack · API Integration · Databases'],
   },
   {
     kicker: 'Projects',
@@ -559,7 +576,7 @@ export const introSlides: IntroSlide[] = [
   {
     kicker: 'Achievements',
     title: 'Top Moments',
-    lines: ['Top 5 of 97 teams — HackIndia 2025', 'NCC C Certificate — A Grade', '266+ DSA problems solved'],
+    lines: ['Top 5 of 97 teams — HackIndia 2025', 'NCC C Certificate', '266+ DSA problems solved'],
   },
   {
     kicker: 'Certified',

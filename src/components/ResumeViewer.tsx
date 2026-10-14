@@ -111,7 +111,7 @@ export function ResumeSheet() {
           <a href={profile.links.codolio} target="_blank" rel="noreferrer" className="hover:text-bone">
             Codolio ↗
           </a>
-          <span className="block">{profile.phone}</span>
+          <a href={`tel:${profile.phone.replace(/[^+\d]/g, '')}`} className="block hover:text-bone">{profile.phone}</a>
         </div>
       </header>
 

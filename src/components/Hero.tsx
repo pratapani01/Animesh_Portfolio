@@ -46,7 +46,7 @@ export default function Hero({ onPlay, onResume, profileId }: { onPlay: () => vo
   const floating = [
     { text: education[0].score, sub: 'B.Tech AI & ML', pos: 'left-[2%] top-[30%]', depth: 1 },
     { text: `${achievements[0].title}`, sub: achievements[0].org, pos: 'right-[0%] top-[18%]', depth: -1 },
-    { text: 'React · Node.js · Python', sub: 'Core stack', pos: 'right-[4%] bottom-[24%]', depth: 0.6 },
+    { text: profile.current.short, sub: `Now · ${profile.current.role}`, pos: 'right-[4%] bottom-[24%]', depth: 0.6 },
   ];
 
   return (
@@ -139,6 +139,14 @@ export default function Hero({ onPlay, onResume, profileId }: { onPlay: () => vo
 
         <motion.p variants={item} className="mt-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-bone/90 sm:text-xs sm:tracking-[0.34em]">
           {profile.tagline.join(' • ')}
+        </motion.p>
+
+        <motion.p variants={item} className="mt-4 inline-flex max-w-full items-center gap-2 self-start rounded-full border border-white/15 bg-white/5 px-3.5 py-1.5 text-[11px] font-semibold text-bone backdrop-blur sm:text-xs">
+          <span className="relative flex h-2 w-2">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#46e3a8] opacity-70" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-[#46e3a8]" />
+          </span>
+          <span className="text-mist">Currently</span> {profile.current.role} <span className="text-mist">@</span> {profile.current.company}
         </motion.p>
 
         <motion.p variants={item} className="mt-4 max-w-xl text-[15px] leading-relaxed text-bone/80 sm:text-base">
